@@ -1,0 +1,10 @@
+{
+  "versionName": "1.0.4",
+  "versionCode": 47,
+  "url": "https://github.com/duoduo-techlab/duo-launch-release/releases/latest/download/duo-launcher.apk",
+  "sha256": "394a0a663fa693614983a0a566c06c48a083bf4f461aaea69b0764863ea48433",
+  "size": 510262,
+  "publishedAt": "2026-11-05T02:46:49Z",
+  "page": "https://github.com/duoduo-techlab/duo-launch-release/releases/tag/v1.0.4",
+  "notes": "首个公开发布版本。\n\n- 固定布局仪表盘：左列多媒体卡 + 导航信息栏，右侧原厂地图铺满，底部快捷栏贴合空调条\n- 替换默认 HOME：开机自启 + Home 键抢回，随时可以退回原厂桌面\n- 空调 / 座椅加热通风直控，车机拒绝时自动降级跳原厂页面\n- 方控键可绑到任意目标页；挂 R 挡去抖后自动拉起 360 影像\n- 崩溃记录 + 连续崩溃进安全模式，必要时回原厂桌面\n- 新增「设置 → 关于 → 检查更新」的可用数据源（GitHub Pages）\n\n安装：\n  adb install -r duo-launcher.apk\n  adb shell cmd package set-home-activity com.duo.launcher/.MainActivity"
+}
