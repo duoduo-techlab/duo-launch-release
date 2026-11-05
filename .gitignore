@@ -1,0 +1,11 @@
+# Pages 站点不需要的东西
+.DS_Store
+Thumbs.db
+*.log
+
+# 本地起 http.server 预览时的临时文件
+*.swp
+__pycache__/
+
+# 本地预览截图（headless Chrome 输出）
+.preview/

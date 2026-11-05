@@ -1,0 +1,10 @@
+<!-- 品牌图标：与主线仓库 app/res/drawable/ic_launcher_fg.xml 同一条路径
+     （品牌绿 D + 深色内孔 + 底部蓝条），这里放在 #0B0F14 圆角底板上当 favicon / 页头标记。 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108" role="img" aria-label="Duo Launch">
+  <rect width="108" height="108" rx="24" fill="#0B0F14"/>
+  <g transform="translate(54 54) scale(0.88) translate(-54 -54)">
+    <path fill="#39D3A3" d="M28,22h24c20.4,0 33,12.5 33,32s-12.6,32 -33,32h-24z"/>
+    <path fill="#0B0F14" d="M48,36h6c12.2,0 19,6.4 19,18s-6.8,18 -19,18h-6z"/>
+    <path fill="#5B9BFF" d="M18,88h72v6h-72z"/>
+  </g>
+</svg>

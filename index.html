@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Duo Launch · 哈弗 B16 车机第三方桌面</title>
+<meta name="description" content="Duo Launch 是长城哈弗 B16 车机（Android 9 / 骁龙 8155）上的第三方桌面：界面全部自绘，不要 root、不碰平台签名，可替换默认 HOME。这里提供 APK 下载与安装说明。">
+<meta name="theme-color" content="#0B0F14">
+<meta name="color-scheme" content="dark">
+<!-- 相对路径：站点放在 <账号>.github.io/<仓库>/ 或自定义域名根目录都能用，改域名不用改页面。 -->
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon.svg">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Duo Launch 首页">
+      <img class="brand-mark" src="assets/icon.svg" alt="" width="28" height="28">
+      <span class="brand-name">Duo Launch</span>
+      <span class="brand-tag">B16</span>
+    </a>
+    <nav class="nav-links" aria-label="页面导航">
+      <a href="#features">功能</a>
+      <a href="#install">安装</a>
+      <a href="#releases">版本</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <div class="nav-act">
+      <a class="btn btn-ghost btn-sm" data-gh-link href="https://github.com/" rel="noopener">GitHub</a>
+      <a class="btn btn-primary btn-sm" data-latest-apk href="https://github.com/">下载 APK</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ───────────────────────────── hero ───────────────────────────── -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">
+        <span class="dot"></span>
+        <span data-field="version">最新版本</span>
+        <span class="sep">·</span>
+        <span>Android 9 / API 28</span>
+      </p>
+
+      <h1>把车机桌面<br>换成自己画的</h1>
+
+      <p class="lede">
+        Duo Launch 是长城哈弗 B16（骁龙 8155 / Android 9）上的第三方桌面。
+        不刷机、不要 root、不碰平台签名：界面全部自绘，厂商能力当可降级的依赖 ——
+        绑得上就消费，绑不上就退回静态展示或原厂页面，桌面本身始终可用。
+      </p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" data-latest-apk href="https://github.com/">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          下载 <span data-field="version-short">最新版</span>
+        </a>
+        <a class="btn btn-ghost btn-lg" href="#install">安装步骤</a>
+      </div>
+
+      <dl class="stats">
+        <div><dt>安装包</dt><dd data-field="size">≈ 400 KB</dd></div>
+        <div><dt>system / root</dt><dd>都不需要</dd></div>
+        <div><dt>更新</dt><dd data-field="updated">—</dd></div>
+      </dl>
+
+      <p class="hash-line">
+        <span class="hash-label">SHA256</span>
+        <code data-field="sha256">发布后自动生成</code>
+        <button class="copy" type="button" data-copy="sha256" title="复制校验和">复制</button>
+      </p>
+    </div>
+
+    <!-- 界面示意：纯 CSS/SVG 画的比例图，不是截图，但结构 1:1 对齐真机布局 -->
+    <div class="hero-visual">
+      <div class="device">
+        <!-- 布局示意：一条 SVG 画完整块车机屏幕（viewBox 1000×562），
+             缩放由 viewBox 决定，不依赖字体/容器查询，任何宽度下比例都一致。 -->
+        <svg class="dash" viewBox="0 0 1000 562" role="img"
+             aria-label="Duo Launch 桌面布局示意：左列导航信息栏与多媒体卡，右侧原厂地图铺满，底部快捷栏与空调条，右上角系统状态与蓄电池电压。">
+          <defs>
+            <linearGradient id="coverGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#31637A"/>
+              <stop offset=".55" stop-color="#16323C"/>
+              <stop offset="1" stop-color="#123B31"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 地图底 -->
+          <rect width="1000" height="562" fill="#101B22"/>
+          <g fill="#16242C">
+            <rect x="330" y="40" width="190" height="150" rx="7"/>
+            <rect x="600" y="24" width="230" height="170" rx="7"/>
+            <rect x="860" y="60" width="140" height="130" rx="7"/>
+            <rect x="340" y="300" width="180" height="150" rx="7"/>
+            <rect x="600" y="290" width="240" height="170" rx="7"/>
+            <rect x="870" y="320" width="130" height="140" rx="7"/>
+          </g>
+          <g stroke="#1E2E38" stroke-width="26" fill="none">
+            <path d="M300 -20 V600"/>
+            <path d="M560 -20 V600"/>
+            <path d="M820 -20 V600"/>
+            <path d="M290 262 H1010"/>
+          </g>
+          <g stroke="#263A46" stroke-width="2" fill="none">
+            <path d="M300 -20 V600"/>
+            <path d="M560 -20 V600"/>
+            <path d="M820 -20 V600"/>
+            <path d="M290 262 H1010"/>
+          </g>
+          <!-- 导航路线 -->
+          <path d="M330 562 V262 H560 V120 H820" stroke="#39D3A3" stroke-width="9"
+                stroke-linecap="round" stroke-linejoin="round" fill="none" opacity=".92"/>
+          <circle cx="560" cy="262" r="12" fill="#5B9BFF" stroke="#0B0F14" stroke-width="4"/>
+
+          <!-- 左列 · 导航信息栏 -->
+          <g>
+            <rect x="16" y="46" width="270" height="80" rx="12" fill="#EEF1FB" fill-opacity=".96"/>
+            <rect x="28" y="57" width="58" height="58" rx="9" fill="#39D3A3"/>
+            <g transform="translate(28.4 54.1) scale(2.2)">
+              <path d="M9 20V9a4 4 0 0 1 4-4h4m0 0-3-3m3 3-3 3"
+                    stroke="#123B31" stroke-width="2.4" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <text x="98" y="86" font-size="34" font-weight="700" fill="#1E272F">320</text>
+            <text x="162" y="86" font-size="20" font-weight="600" fill="#5A6B80">米</text>
+            <text x="98" y="112" font-size="19" fill="#33445C">右转 → 建设中路</text>
+            <circle cx="256" cy="86" r="21" fill="#FFFFFF" stroke="#D9433D" stroke-width="5"/>
+            <text x="256" y="92" font-size="19" font-weight="700" fill="#1E272F" text-anchor="middle">60</text>
+          </g>
+
+          <!-- 左列 · 多媒体卡 -->
+          <g>
+            <rect x="16" y="140" width="270" height="358" rx="12" fill="#0C141B"/>
+            <rect x="16" y="140" width="270" height="358" rx="12" fill="#1B3340" fill-opacity=".55"/>
+            <rect x="30" y="154" width="242" height="106" rx="8" fill="url(#coverGrad)"/>
+            <circle cx="151" cy="207" r="31" fill="none" stroke="#FFFFFF" stroke-opacity=".38" stroke-width="2"/>
+            <circle cx="151" cy="207" r="21" fill="none" stroke="#FFFFFF" stroke-opacity=".28" stroke-width="6"/>
+            <circle cx="151" cy="207" r="7" fill="#0C141B" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/>
+            <text x="151" y="298" font-size="26" font-weight="650" fill="#FFFFFF" text-anchor="middle">漠河舞厅</text>
+            <text x="151" y="324" font-size="18" fill="#DCE3EA" text-anchor="middle">柳爽</text>
+            <text x="151" y="360" font-size="17" fill="#39D3A3" text-anchor="middle">如果有时间 你会来看一看我吧</text>
+            <rect x="30" y="404" width="242" height="6" rx="3" fill="#FFFFFF" fill-opacity=".22"/>
+            <rect x="30" y="404" width="86" height="6" rx="3" fill="#FFFFFF"/>
+            <text x="30" y="432" font-size="15" fill="#E7EDF3" fill-opacity=".7">01:12</text>
+            <text x="272" y="432" font-size="15" fill="#E7EDF3" fill-opacity=".7" text-anchor="end">04:38</text>
+            <circle cx="117" cy="470" r="9" fill="#FFFFFF" fill-opacity=".72"/>
+            <circle cx="151" cy="470" r="15" fill="#39D3A3"/>
+            <path d="M147 463 l12 7 -12 7z" fill="#0B0F14"/>
+            <circle cx="185" cy="470" r="9" fill="#FFFFFF" fill-opacity=".72"/>
+          </g>
+
+          <!-- 右上角 · 系统状态与蓄电池 -->
+          <g>
+            <rect x="782" y="30" width="62" height="32" rx="16" fill="#0F161D" fill-opacity=".72"
+                  stroke="#FFFFFF" stroke-opacity=".12"/>
+            <text x="813" y="51" font-size="15" font-weight="600" fill="#C8D4DF" text-anchor="middle">蓝牙</text>
+            <rect x="852" y="30" width="66" height="32" rx="16" fill="#0F161D" fill-opacity=".72"
+                  stroke="#FFFFFF" stroke-opacity=".12"/>
+            <text x="885" y="51" font-size="15" font-weight="600" fill="#C8D4DF" text-anchor="middle">Wi-Fi</text>
+            <rect x="926" y="30" width="62" height="32" rx="16" fill="#0F161D" fill-opacity=".72"
+                  stroke="#FFFFFF" stroke-opacity=".12"/>
+            <text x="957" y="51" font-size="15" font-weight="600" fill="#39D3A3" text-anchor="middle">12.4V</text>
+          </g>
+
+          <!-- 底部 · 快捷栏 + 空调条 -->
+          <g>
+            <rect x="0" y="508" width="1000" height="54" fill="#0F161D" fill-opacity=".82"/>
+            <rect x="0" y="508" width="1000" height="1.5" fill="#FFFFFF" fill-opacity=".08"/>
+            <g font-size="16" font-weight="600">
+              <rect x="16" y="519" width="66" height="32" rx="9" fill="#FFFFFF" fill-opacity=".08"/>
+              <text x="49" y="540" fill="#D8E2EC" text-anchor="middle">22.5°</text>
+              <rect x="90" y="519" width="62" height="32" rx="9" fill="#FFFFFF" fill-opacity=".08"/>
+              <text x="121" y="540" fill="#D8E2EC" text-anchor="middle">座椅</text>
+              <rect x="160" y="519" width="66" height="32" rx="9" fill="#123B31"/>
+              <text x="193" y="540" fill="#39D3A3" text-anchor="middle">AUTO</text>
+              <rect x="470" y="521" width="28" height="28" rx="7" fill="#FFFFFF" fill-opacity=".14"/>
+              <rect x="506" y="521" width="28" height="28" rx="7" fill="#5B9BFF" fill-opacity=".5"/>
+              <rect x="542" y="521" width="28" height="28" rx="7" fill="#FFFFFF" fill-opacity=".14"/>
+              <rect x="578" y="521" width="28" height="28" rx="7" fill="#39D3A3" fill-opacity=".45"/>
+              <rect x="822" y="519" width="62" height="32" rx="9" fill="#FFFFFF" fill-opacity=".08"/>
+              <text x="853" y="540" fill="#D8E2EC" text-anchor="middle">通风</text>
+              <rect x="892" y="519" width="66" height="32" rx="9" fill="#FFFFFF" fill-opacity=".08"/>
+              <text x="925" y="540" fill="#D8E2EC" text-anchor="middle">23.0°</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <p class="visual-note">布局示意 · 真机截图见下</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────── features ─────────────────────────── -->
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>不是悬浮窗，也不是投屏</h2>
+      <p>原厂 <code>com.gwm.app.launcher</code> 是系统签名 + persistent 应用，每次进程启动都会把默认 HOME 改回自己；
+        左侧导航栏和顶部状态栏永远属于 SystemUI。平台签名拿不到，所以 Duo 换了一条路。</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1z"/></svg>
+        <h3>替换默认 HOME</h3>
+        <p>注册 HOME + LAUNCHER，可设成默认桌面；再叠一层开机自启与 Home 键抢回，不依赖系统「记住上次选择」。</p>
+      </article>
+
+      <article class="card">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 6 6-2 6 2 6-2v14l-6 2-6-2-6 2zM9 4v14m6-12v14"/></svg>
+        <h3>地图铺满，导航照抄原厂</h3>
+        <p>右侧 70% 是原厂高德地图的实时画面，HUD 主卡尺寸与配色取自原厂车机皮肤：转向箭头、车道图、电子眼气泡都是真的。</p>
+      </article>
+
+      <article class="card">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.4"/><path d="M12 3v2.4M12 18.6V21"/></svg>
+        <h3>多媒体一条线</h3>
+        <p>GUX 媒体总线优先、网易云兜底：封面模糊铺底、旋转 CD、歌词、进度与播放控制都在左列一张卡里。</p>
+      </article>
+
+      <article class="card">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M4.5 7.5 12 3l7.5 4.5M4.5 16.5 12 21l7.5-4.5M4.5 7.5v9M19.5 7.5v9"/></svg>
+        <h3>空调与座椅直控</h3>
+        <p>主副驾温度、风量、座椅加热与通风走原厂 Binder；车机拒绝 <code>setData</code> 时自动降级跳原厂空调页，不假装成功。</p>
+      </article>
+
+      <article class="card">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="7" width="19" height="10" rx="5"/><path d="M7 12h2m-1-1v2M15.5 11.5h.01M17.8 13.2h.01"/></svg>
+        <h3>方控与倒挡</h3>
+        <p>方控键可以绑到任意目标页；挂 R 挡（去抖 500ms、一次会话只触发一次）自动拉起 360 影像，退出即回桌面。</p>
+      </article>
+
+      <article class="card">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7.5 3v6c0 4.2-3 7.4-7.5 9-4.5-1.6-7.5-4.8-7.5-9V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg>
+        <h3>崩了也能开车</h3>
+        <p>崩溃记录 + 连续崩溃进安全模式：先把 GUX、方控、地图实时渲染这些非核心能力摘掉，必要时回原厂桌面。</p>
+      </article>
+    </div>
+
+    <figure class="shot-slot" data-shot-slot hidden>
+      <img data-shot-img alt="Duo Launch 在车机上的实际界面" loading="lazy" decoding="async">
+      <figcaption data-shot-cap>真机界面</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ─────────────────────────── install ─────────────────────────── -->
+<section class="section section-alt" id="install">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>装上去，大概三分钟</h2>
+      <p>车机是 <code>user</code> 构建：不能 <code>adb root</code>、没有 <code>su</code>，但能侧载安装。三种方式任选其一。</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <span class="step-n">1</span>
+        <div class="step-b">
+          <h3>拿到 APK</h3>
+          <p>页面上的「下载」永远指向最新正式包；历史版本在 <a href="#releases">版本记录</a> 里。包名 <code>com.duo.launcher</code>，签名是固定的调试签名，所以后续版本可以覆盖安装。</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="step-n">2</span>
+        <div class="step-b">
+          <h3>装进车机</h3>
+          <div class="tabs" data-tabs>
+            <div class="tab-bar" role="tablist" aria-label="安装方式">
+              <button role="tab" aria-selected="true" data-tab="adb">ADB</button>
+              <button role="tab" aria-selected="false" data-tab="usb">U 盘</button>
+            </div>
+            <div class="tab-panel" data-panel="adb" role="tabpanel">
+              <pre class="code"><code>adb devices
+adb install -r duo-launcher.apk
+adb shell am start -n com.duo.launcher/.MainActivity</code></pre>
+              <p class="hint">提示 <code>INSTALL_FAILED_UPDATE_INCOMPATIBLE</code> = 之前装过别的签名：先 <code>adb uninstall com.duo.launcher</code> 再装（会清掉主题与崩溃记录）。</p>
+            </div>
+            <div class="tab-panel" data-panel="usb" role="tabpanel" hidden>
+              <ol class="oled">
+                <li>把 <code>duo-launcher.apk</code> 拷到 FAT32/exFAT U 盘根目录或 <code>Download/</code>。</li>
+                <li>U 盘插车机 → 用车机自带的文件管理器打开 APK → 允许「未知来源应用」。</li>
+                <li>部分固件会拦第三方安装，需要在「设置 → 应用 → 特殊权限 → 安装未知应用」里给文件管理器授权。</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="step-n">3</span>
+        <div class="step-b">
+          <h3>设为默认桌面</h3>
+          <pre class="code"><code>adb shell cmd package set-home-activity com.duo.launcher/.MainActivity</code></pre>
+          <p class="hint">也可以走车机 UI：<code>设置 → 应用 → 默认应用 → 主屏幕 → Duo 桌面</code>。首次启动会弹一次桌面选择器，选 Duo 并勾「始终」。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="callout-i" aria-hidden="true">↩</div>
+      <div>
+        <h3>想退回原厂桌面</h3>
+        <p>Duo 不修改任何系统分区，随时可以退回：</p>
+        <pre class="code"><code>adb shell cmd package set-home-activity com.gwm.app.launcher/.LauncherActivity
+# 或者直接卸载
+adb uninstall com.duo.launcher</code></pre>
+        <p class="hint">原厂 launcher 是 persistent 应用，卸载 Duo 后下次开机自然回到原厂桌面。先拍照记下原厂桌面样子，方便核对。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────── releases ─────────────────────────── -->
+<section class="section" id="releases">
+  <div class="wrap">
+    <div class="sec-head sec-head-row">
+      <div>
+        <h2>版本记录</h2>
+        <p>每个版本都是同一个固定签名，可以直接覆盖安装。发版由私有仓库的 CI 在打 tag 时自动完成。</p>
+      </div>
+      <a class="btn btn-ghost btn-sm" data-releases-page href="https://github.com/" rel="noopener">在 GitHub 上查看 ↗</a>
+    </div>
+
+    <div class="rel-head" aria-hidden="true">
+      <span>版本</span><span>日期</span><span>体积</span><span>说明</span><span></span>
+    </div>
+    <ul class="rel-list" data-release-list>
+      <li class="rel-empty">正在读取版本记录…</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ───────────────────────────── faq ───────────────────────────── -->
+<section class="section section-alt" id="faq">
+  <div class="wrap wrap-narrow">
+    <div class="sec-head">
+      <h2>常见问题</h2>
+    </div>
+
+    <details class="faq" open>
+      <summary>会顶掉原厂桌面吗？会改系统吗？</summary>
+      <p>不会改系统分区，也不写入任何系统应用。Duo 只是把自己注册成可选 HOME；你选它为默认桌面之后，按 Home 才会进 Duo。
+        「设为默认」是系统设置，随时可以改回去，卸载 Duo 后自动恢复。</p>
+    </details>
+
+    <details class="faq">
+      <summary>为什么是调试签名？安全吗？</summary>
+      <p>车机装不了平台签名之外的系统应用，也不需要 —— 普通第三方应用就够用。签名固定保存在 CI 的 secret 里，所以版本之间可以互相覆盖安装。
+        代价是别人拿到同一个密钥就能覆盖你的 Duo，因此更新请只从本页或 GitHub Release 下载，并核对页面上的 SHA256。</p>
+    </details>
+
+    <details class="faq">
+      <summary>需要联网吗？会收集数据吗？</summary>
+      <p>日常使用完全不联网：车辆数据、媒体、地图全部来自车机本地的厂商服务和已装应用。
+        唯一的可选网络请求是「设置 → 关于 → 检查更新」，只 GET 一张版本清单 JSON，不上报安装 ID、不做统计。</p>
+    </details>
+
+    <details class="faq">
+      <summary>会自动更新吗？</summary>
+      <p>不会。车机是 <code>user</code> 构建，没有应用商店也无法静默安装，所以检查更新只做「告诉你有没有新版」，装不装、怎么装仍由你决定。
+        本页的下载按钮永远指向最新正式包，用 ADB 覆盖安装即可。</p>
+    </details>
+
+    <details class="faq">
+      <summary>支持别的车型吗？</summary>
+      <p>只针对哈弗 B16（GWM / 骁龙 8155 / Android 9 / 1920×1080）调过。其他 GWM 车型理论上能看到界面，但车辆字段、方控键位、厂商组件名都要先用应用内的「兼容性自检」确认，绑不上的能力会降级或隐藏。</p>
+    </details>
+
+    <details class="faq">
+      <summary>装完黑屏 / 一直闪回怎么办？</summary>
+      <p>连续崩溃会触发安全模式并尝试回原厂桌面。如果还卡着，插上 ADB：</p>
+      <pre class="code"><code>adb shell cmd package set-home-activity com.gwm.app.launcher/.LauncherActivity
+adb uninstall com.duo.launcher</code></pre>
+      <p>改完不用刷机，也不会留下残留。</p>
+    </details>
+
+    <details class="faq">
+      <summary>这个项目的源码在哪？</summary>
+      <p>主线开发仓库是私有的，没有公开计划。本仓库只做两件事：放发布产物、放这个介绍页。</p>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <img src="assets/icon.svg" alt="" width="32" height="32">
+      <div>
+        <p class="foot-name">Duo Launch</p>
+        <p class="foot-sub">哈弗 B16 车机第三方桌面 · <span data-field="version-short">—</span></p>
+      </div>
+    </div>
+    <p class="foot-disc">
+      本项目是第三方个人作品，与长城汽车 / 哈弗无关，未获官方授权或背书。<br>
+      侧载安装与替换桌面均属自行改动，风险自负；请在停车状态下操作。
+    </p>
+    <p class="foot-meta">
+      <span data-field="updated">—</span> 更新 · 产物由 GitHub Releases 托管 · 页面由 GitHub Pages 托管
+    </p>
+  </div>
+</footer>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>

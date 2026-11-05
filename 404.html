@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>页面不存在 · Duo Launch</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0B0F14">
+<!-- 故意不引外部资源：项目页的 404 会在任意深度被触发，绝对/相对路径都可能指错。 -->
+<style>
+  html, body { height: 100%; margin: 0; }
+  body {
+    display: grid;
+    place-items: center;
+    background: #0B0F14;
+    color: #F2F5F8;
+    font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    text-align: center;
+    padding: 24px;
+  }
+  h1 { font-size: 1.4rem; margin: 0 0 10px; }
+  p { color: #93A0B0; margin: 0 0 22px; font-size: .92rem; }
+  a {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: #39D3A3;
+    color: #06251C;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: .9rem;
+  }
+  svg { width: 46px; height: 46px; margin-bottom: 18px; }
+</style>
+</head>
+<body>
+  <main>
+    <svg viewBox="0 0 108 108" aria-hidden="true">
+      <rect width="108" height="108" rx="24" fill="#101720"/>
+      <path fill="#39D3A3" d="M28 22h24c20.4 0 33 12.5 33 32s-12.6 32-33 32H28z"/>
+      <path fill="#101720" d="M48 36h6c12.2 0 19 6.4 19 18s-6.8 18-19 18h-6z"/>
+      <path fill="#5B9BFF" d="M18 88h72v6H18z"/>
+    </svg>
+    <h1>这个地址没有内容</h1>
+    <p>可能是旧版本的下载链接，回首页看最新的包。</p>
+    <a id="home" href="./">回 Duo Launch 首页</a>
+  </main>
+  <script>
+    // 项目页的根是 /<仓库>/，用户页是 /；按路径第一段还原，两种都跳对。
+    (function () {
+      var first = location.pathname.split('/').filter(Boolean)[0];
+      document.getElementById('home').href = '/' + (first ? first + '/' : '');
+    })();
+  </script>
+</body>
+</html>
