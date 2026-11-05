@@ -29,6 +29,7 @@ Duo Launch（长城哈弗 B16 车机第三方桌面）的**发布仓库** ——
 │   ├── style.css         # 颜色取自主线仓库的 theme/dark token
 │   ├── app.js            # 读 data/releases.json 渲染版本信息（零依赖）
 │   ├── icon.svg          # 品牌图标（与 APK 的自适应图标同一条 path）
+│   ├── qq-group.png      # 用户群二维码（群号 1062571544，白底，别压暗或反色）
 │   └── shots/            # 可选真机截图：放 dashboard.png 页面自动出现
 └── data/
     ├── releases.json     # 全部版本（页面用，versionCode 倒序）

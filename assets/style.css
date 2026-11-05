@@ -558,6 +558,73 @@ h1, h2, h3 { line-height: 1.2; letter-spacing: -.015em; margin: 0; }
 .faq p { margin: 10px 0 0; color: var(--dim); font-size: .9rem; }
 .faq .code { margin-top: 10px; }
 
+/* ─────────────────────── community ─────────────────────── */
+.join {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 36px;
+  align-items: center;
+  padding: 32px;
+  border: 1px solid #1E3B33;
+  border-radius: 18px;
+  background:
+    radial-gradient(90% 130% at 100% 0%, rgba(57, 211, 163, .10), transparent 62%),
+    linear-gradient(180deg, rgba(21, 27, 35, .92), rgba(15, 20, 26, .92));
+}
+.join-copy .eyebrow { margin-bottom: 16px; }
+.join-copy h2 {
+  font-size: clamp(1.5rem, 2.6vw, 1.95rem);
+  font-weight: 680;
+  letter-spacing: -.025em;
+}
+.join-lede {
+  margin: 12px 0 0;
+  color: var(--dim);
+  font-size: .95rem;
+  max-width: 46ch;
+}
+.join-num {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 22px 0 0;
+}
+.join-label { color: #6E7B8B; font-size: .8rem; }
+.join-num strong {
+  font-family: var(--mono);
+  font-size: 1.12rem;
+  letter-spacing: .05em;
+  color: var(--accent);
+}
+.join-hint {
+  margin: 16px 0 0;
+  color: #7C8896;
+  font-size: .82rem;
+  max-width: 48ch;
+}
+.join-hint code { font-size: .8em; }
+
+/* 二维码必须保持白底深色：反色或低对比会让手机扫不出来 */
+.join-card {
+  margin: 0;
+  padding: 14px 14px 10px;
+  border-radius: 14px;
+  background: #FFFFFF;
+  text-align: center;
+  justify-self: center;
+  box-shadow: 0 18px 40px -24px rgba(0, 0, 0, .95);
+}
+.join-card img { width: 208px; height: auto; margin: 0 auto; }
+.join-card figcaption { margin-top: 8px; font-size: .78rem; color: #5A6B80; }
+
+@media (max-width: 760px) {
+  .join { grid-template-columns: 1fr; padding: 22px; gap: 24px; text-align: center; }
+  .join-lede, .join-hint { margin-left: auto; margin-right: auto; }
+  .join-num { justify-content: center; }
+  .join-card img { width: 190px; }
+}
+
 /* ────────────────────────── footer ────────────────────────── */
 .foot {
   border-top: 1px solid var(--stroke);
@@ -621,7 +688,7 @@ h1, h2, h3 { line-height: 1.2; letter-spacing: -.015em; margin: 0; }
 }
 
 /* 进场动画：只给 JS 打开了 .anim 的浏览器，避免无 JS 时内容消失 */
-.anim .card, .anim .step, .anim .callout { opacity: 0; transform: translateY(10px); }
+.anim .card, .anim .step, .anim .callout, .anim .join { opacity: 0; transform: translateY(10px); }
 .anim .in { opacity: 1; transform: none; transition: opacity .5s ease, transform .5s ease; }
 
 @media print {

@@ -282,6 +282,7 @@
     if (!('IntersectionObserver' in window)) return;
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     document.body.classList.add('anim');
+    var nodes = $$('.card, .step, .callout, .join');
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
@@ -289,7 +290,12 @@
         io.unobserve(en.target);
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-    $$('.card, .step, .callout').forEach(function (el) { io.observe(el); });
+    nodes.forEach(function (el) { io.observe(el); });
+    // 兜底：观察器在某些环境下（无头浏览器、标签页后台、特殊 embed）可能不回调，
+    // 1.5s 后把还隐着的全部放出来 —— 宁可少一次动效，也不能让内容永远停在 opacity:0。
+    setTimeout(function () {
+      nodes.forEach(function (el) { el.classList.add('in'); });
+    }, 1500);
   }
 
   /* ───────────────────────── 启动 ───────────────────────── */
