@@ -10,10 +10,10 @@ Duo Launch（长城哈弗 B16 车机第三方桌面）的**发布仓库** ——
 
 | | |
 |---|---|
-| 站点 | `https://<owner>.github.io/duo-launch-release/` |
-| 最新直链 | `https://github.com/<owner>/duo-launch-release/releases/latest/download/duo-launcher.apk` |
-| App 更新清单 | `https://<owner>.github.io/duo-launch-release/data/update.json` |
-| 版本列表 | `https://<owner>.github.io/duo-launch-release/data/releases.json` |
+| 站点 | `https://duoduo-techlab.github.io/duo-launch-release/` |
+| 最新直链 | `https://github.com/duoduo-techlab/duo-launch-release/releases/latest/download/duo-launcher.apk` |
+| App 更新清单 | `https://duoduo-techlab.github.io/duo-launch-release/data/update.json` |
+| 版本列表 | `https://duoduo-techlab.github.io/duo-launch-release/data/releases.json` |
 
 > 页面里所有链接都是**相对路径**，所以换成自定义域名、或把仓库改名为
 > `<owner>.github.io` 都不需要改 HTML。
@@ -52,20 +52,21 @@ CI 里是 `.github/workflows/build.yml` 打 tag 之后的最后一步，需要�
 `contents:write`：
 
 - secret `RELEASE_REPO_TOKEN`：fine-grained PAT（只授权 `duo-launch-release` 的 Contents: R/W）
-- variable `RELEASE_REPO`：可选，默认 `cary-hu/duo-launch-release`
+- variable `RELEASE_REPO`：可选，默认 `duoduo-techlab/duo-launch-release`
 
 没配 token 时那一步只打 `::warning::` 跳过，不影响七牛那条链路。
 
 ## 一次性设置（GitHub Pages）
 
 1. 仓库 → Settings → Pages → Source 选 **Deploy from a branch**，分支 `main`、目录 `/ (root)`；
-2. 等第一次 deploy 完，`https://<owner>.github.io/duo-launch-release/` 就能打开；
+2. 等第一次 deploy 完，`https://duoduo-techlab.github.io/duo-launch-release/` 就能打开；
 3. 站点打开是空态（「待发布」）说明还没有发过版 —— 跑一次上面的 publish 脚本就有内容。
 
-**关于域名**：GitHub Pages 的地址永远是 `https://<账号>.github.io/<仓库>/`。
-`https://duo-launch-release.github.io` 这种写法要求账号（或 org）本身叫 `duo-launch-release`，
-并且仓库名为 `duo-launch-release.github.io`。要走那条路，把本仓库改名、把
-`index.html` 顶到 `main` 根目录即可，页面不用改。
+**关于域名**：GitHub Pages 的地址永远是 `https://<组织>.github.io/<仓库>/`。现在组织叫
+`duoduo-techlab`，所以是 `https://duoduo-techlab.github.io/duo-launch-release/`。
+想要 `https://duo-launch-release.github.io` 这种根域名，得把组织（或账号）改名成
+`duo-launch-release`，再建一个叫 `duo-launch-release.github.io` 的用户主页仓库 ——
+和本仓库不是一回事。页面全是相对路径，真要搬也不用改 HTML。
 
 ## 更新源说明
 
@@ -74,7 +75,7 @@ CI 里是 `.github/workflows/build.yml` 打 tag 之后的最后一步，需要�
 所以把 App 的更新源从七牛切到 Pages 只需要编译时换一个地址，不动代码：
 
 ```bash
-UPDATE_MANIFEST_URL=https://<owner>.github.io/duo-launch-release/data/update.json bash app/build.sh
+UPDATE_MANIFEST_URL=https://duoduo-techlab.github.io/duo-launch-release/data/update.json bash app/build.sh
 ```
 
 差别只有一个：GitHub Pages 走 Fastly，缓存约 10 分钟、没有主动刷新接口（七牛可以调

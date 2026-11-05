@@ -10,7 +10,7 @@
   'use strict';
 
   var CONFIG = {
-    repo: 'cary-hu/duo-launch-release',
+    repo: 'duoduo-techlab/duo-launch-release',
     manifest: 'data/releases.json',
     // GitHub 的 stable 链接：始终指向最新的非 prerelease 的同名资源
     latestApk: function () {
