@@ -1,9 +1,20 @@
 {
   "schemaVersion": 1,
   "repo": "duoduo-techlab/duo-launch-release",
-  "updatedAt": "2026-11-05T02:46:49Z",
-  "latest": "1.0.4",
+  "updatedAt": "2026-11-07T11:35:37Z",
+  "latest": "1.0.5",
   "releases": [
+    {
+      "versionName": "1.0.5",
+      "versionCode": 48,
+      "tag": "v1.0.5",
+      "publishedAt": "2026-11-07T11:35:37Z",
+      "size": 535432,
+      "sha256": "73bfceccfefe4beee657f3f75740e438da86b01cb6f873c4964c20873493512f",
+      "url": "https://github.com/duoduo-techlab/duo-launch-release/releases/download/v1.0.5/duo-launcher.apk",
+      "page": "https://github.com/duoduo-techlab/duo-launch-release/releases/tag/v1.0.5",
+      "notes": "## ✨ 新增\n\n- **hud**：风挡 HUD 版式改版 —— 车道行到顶部，灯 + 剩余里程合成底部横排 (#2)\n- **volume**：分通道音量面板 + 导航播报通道 (#3)\n- **gesture**：全屏多指手势调音量与空调温度 (#1)\n\n## 🐞 修复\n\n- **gesture**：修正音量手势识别里的 Float/Integer 类型错误\n\n## 🧹 其他\n\n- **icons**：补上 ic_traffic_light 的产物文件\n- **release**：仓库迁移到 duoduo-techlab，更新示例 owner\n- add more app"
+    },
     {
       "versionName": "1.0.4",
       "versionCode": 47,

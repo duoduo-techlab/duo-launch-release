@@ -1,10 +1,10 @@
 {
-  "versionName": "1.0.4",
-  "versionCode": 47,
+  "versionName": "1.0.5",
+  "versionCode": 48,
   "url": "https://github.com/duoduo-techlab/duo-launch-release/releases/latest/download/duo-launcher.apk",
-  "sha256": "394a0a663fa693614983a0a566c06c48a083bf4f461aaea69b0764863ea48433",
-  "size": 510262,
-  "publishedAt": "2026-11-05T02:46:49Z",
-  "page": "https://github.com/duoduo-techlab/duo-launch-release/releases/tag/v1.0.4",
-  "notes": "首个公开发布版本。\n\n- 固定布局仪表盘：左列多媒体卡 + 导航信息栏，右侧原厂地图铺满，底部快捷栏贴合空调条\n- 替换默认 HOME：开机自启 + Home 键抢回，随时可以退回原厂桌面\n- 空调 / 座椅加热通风直控，车机拒绝时自动降级跳原厂页面\n- 方控键可绑到任意目标页；挂 R 挡去抖后自动拉起 360 影像\n- 崩溃记录 + 连续崩溃进安全模式，必要时回原厂桌面\n- 新增「设置 → 关于 → 检查更新」的可用数据源（GitHub Pages）\n\n安装：\n  adb install -r duo-launcher.apk\n  adb shell cmd package set-home-activity com.duo.launcher/.MainActivity"
+  "sha256": "73bfceccfefe4beee657f3f75740e438da86b01cb6f873c4964c20873493512f",
+  "size": 535432,
+  "publishedAt": "2026-11-07T11:35:37Z",
+  "page": "https://github.com/duoduo-techlab/duo-launch-release/releases/tag/v1.0.5",
+  "notes": "## ✨ 新增\n\n- **hud**：风挡 HUD 版式改版 —— 车道行到顶部，灯 + 剩余里程合成底部横排 (#2)\n- **volume**：分通道音量面板 + 导航播报通道 (#3)\n- **gesture**：全屏多指手势调音量与空调温度 (#1)\n\n## 🐞 修复\n\n- **gesture**：修正音量手势识别里的 Float/Integer 类型错误\n\n## 🧹 其他\n\n- **icons**：补上 ic_traffic_light 的产物文件\n- **release**：仓库迁移到 duoduo-techlab，更新示例 owner\n- add more app"
 }
