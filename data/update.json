@@ -2,9 +2,9 @@
   "versionName": "1.0.5",
   "versionCode": 48,
   "url": "https://github.com/duoduo-techlab/duo-launch-release/releases/latest/download/duo-launcher.apk",
-  "sha256": "e32b15bad16cb3f5fab77c7702377099a7b3baaefd032f8a8feab5a04e3b2e7f",
+  "sha256": "ad6c225aee4f7c3ceb8022238d5939fa334f1c99ad57bf4feec15946d0b6d39e",
   "size": 535432,
-  "publishedAt": "2026-11-07T11:41:18Z",
+  "publishedAt": "2026-11-07T11:42:13Z",
   "page": "https://github.com/duoduo-techlab/duo-launch-release/releases/tag/v1.0.5",
-  "notes": "_本版本没有提交（v1.0.5..HEAD 为空）_"
+  "notes": "**完整变更**：[v1.0.5...HEAD](https://github.com/duoduo-techlab/duo-launch/compare/v1.0.5...HEAD)\n\n_本版本没有提交（v1.0.5..HEAD 为空）_"
 }
