@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
   "repo": "duoduo-techlab/duo-launch-release",
-  "updatedAt": "2026-11-10T13:06:21Z",
+  "updatedAt": "2026-11-10T13:56:26Z",
   "latest": "1.0.6",
   "releases": [
     {
       "versionName": "1.0.6",
       "versionCode": 49,
       "tag": "v1.0.6",
-      "publishedAt": "2026-11-10T13:06:21Z",
+      "publishedAt": "2026-11-10T13:56:26Z",
       "size": 539528,
-      "sha256": "3427b6cdf470eac9c714cd7c300971b38e603c9d8a71a91fb420dd9ba34601cb",
+      "sha256": "bedc389a20768ecd086375f321c008020b9d0f7f6f76a4a7f251a202f9a0a98e",
       "url": "https://github.com/duoduo-techlab/duo-launch-release/releases/download/v1.0.6/duo-launcher.apk",
       "page": "https://github.com/duoduo-techlab/duo-launch-release/releases/tag/v1.0.6",
-      "notes": "**完整变更**：[v1.0.5...v1.0.6](https://github.com/duoduo-techlab/duo-launch/compare/v1.0.5...v1.0.6)\n\n## ✨ 新增\n\n- **media**：媒体卡片新增酷我车机版音源，来源标签改按包名识别（[`e8a0ea5`](https://github.com/duoduo-techlab/duo-launch/commit/e8a0ea5)）\n\n## 🐞 修复\n\n- **media**：补回 GUX 监听与 guxUsable()，修复 MediaRepository 编译失败（[`3bcc156`](https://github.com/duoduo-techlab/duo-launch/commit/3bcc156)）\n\n## 📄 文档\n\n- **release**：记录 CI 签名与本地 keystore 不是同一把，RELEASE_REPO_TOKEN 已配置（[`7d04c70`](https://github.com/duoduo-techlab/duo-launch/commit/7d04c70)）\n\n## 🧹 其他\n\n- **release**：版本号 1.0.6 / versionCode 49（[`45d37e0`](https://github.com/duoduo-techlab/duo-launch/commit/45d37e0)）"
+      "notes": "**完整变更**：[v1.0.6...HEAD](https://github.com/duoduo-techlab/duo-launch/compare/v1.0.6...HEAD)\n\n## 🧹 其他\n\n- **release**：下线七牛链路，更新源只走发布仓库 GitHub Pages（[`86b82b4`](https://github.com/duoduo-techlab/duo-launch/commit/86b82b4)）"
     },
     {
       "versionName": "1.0.5",
