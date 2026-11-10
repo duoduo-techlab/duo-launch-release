@@ -1,10 +1,10 @@
 {
-  "versionName": "1.0.6",
-  "versionCode": 49,
+  "versionName": "1.0.7",
+  "versionCode": 50,
   "url": "https://github.com/duoduo-techlab/duo-launch-release/releases/latest/download/duo-launcher.apk",
-  "sha256": "edeb5b8c5b217bb5266fa998aa46b8771729d90ae1f0b7069f775cf72cdef401",
-  "size": 539528,
-  "publishedAt": "2026-11-10T14:07:31Z",
-  "page": "https://github.com/duoduo-techlab/duo-launch-release/releases/tag/v1.0.6",
-  "notes": "**完整变更**：[v1.0.5...v1.0.6](https://github.com/duoduo-techlab/duo-launch/compare/v1.0.5...v1.0.6)\n\n## ✨ 新增\n\n- **media**：媒体卡片新增酷我车机版音源，来源标签改按包名识别（[`e8a0ea5`](https://github.com/duoduo-techlab/duo-launch/commit/e8a0ea5)）\n\n## 🐞 修复\n\n- **media**：补回 GUX 监听与 guxUsable()，修复 MediaRepository 编译失败（[`3bcc156`](https://github.com/duoduo-techlab/duo-launch/commit/3bcc156)）\n\n## 📄 文档\n\n- **release**：记录 CI 签名与本地 keystore 不是同一把，RELEASE_REPO_TOKEN 已配置（[`7d04c70`](https://github.com/duoduo-techlab/duo-launch/commit/7d04c70)）\n\n## 🧹 其他\n\n- **release**：版本号 1.0.6 / versionCode 49（[`45d37e0`](https://github.com/duoduo-techlab/duo-launch/commit/45d37e0)）"
+  "sha256": "dc33b78bf9326be404184911fe30fabac661e7d65c1b979f180daab92081c7be",
+  "size": 560322,
+  "publishedAt": "2026-11-10T15:30:36Z",
+  "page": "https://github.com/duoduo-techlab/duo-launch-release/releases/tag/v1.0.7",
+  "notes": "**完整变更**：[v1.0.6...v1.0.7](https://github.com/duoduo-techlab/duo-launch/compare/v1.0.6...v1.0.7)\n\n## ✨ 新增\n\n- **media**：汽水音乐车机版只走 GUX 显示，不进框架音源表（[`3303e44`](https://github.com/duoduo-techlab/duo-launch/commit/3303e44)）\n- **dock**：v1.0.30 空调操作面板 + 未导航时的快搜面板（[`34e3afa`](https://github.com/duoduo-techlab/duo-launch/commit/34e3afa)）\n- **map**：中控地图加巡航灯胶囊，灯色走新的 map.light_* token（[`1f33e46`](https://github.com/duoduo-techlab/duo-launch/commit/1f33e46)）\n- **hud**：巡航灯接入风挡 HUD —— 高德 NAVITOOL_CRUISE_TRAFFIC_LIGHTS（[`61ac50e`](https://github.com/duoduo-techlab/duo-launch/commit/61ac50e)）\n\n## 🐞 修复\n\n- **release**：发布仓库里已存在的 Release 只覆盖资源，不再重写说明（[`0354b1a`](https://github.com/duoduo-techlab/duo-launch/commit/0354b1a)）\n\n## 📄 文档\n\n- **device**：拆解「哈弗车机桌面-岛」——TBox / 12V SOC / 嵌卡地图 / 扫码壁纸（[`384e9b5`](https://git"
 }

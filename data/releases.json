@@ -1,9 +1,20 @@
 {
   "schemaVersion": 1,
   "repo": "duoduo-techlab/duo-launch-release",
-  "updatedAt": "2026-11-10T14:07:31Z",
-  "latest": "1.0.6",
+  "updatedAt": "2026-11-10T15:30:36Z",
+  "latest": "1.0.7",
   "releases": [
+    {
+      "versionName": "1.0.7",
+      "versionCode": 50,
+      "tag": "v1.0.7",
+      "publishedAt": "2026-11-10T15:30:36Z",
+      "size": 560322,
+      "sha256": "dc33b78bf9326be404184911fe30fabac661e7d65c1b979f180daab92081c7be",
+      "url": "https://github.com/duoduo-techlab/duo-launch-release/releases/download/v1.0.7/duo-launcher.apk",
+      "page": "https://github.com/duoduo-techlab/duo-launch-release/releases/tag/v1.0.7",
+      "notes": "**完整变更**：[v1.0.6...v1.0.7](https://github.com/duoduo-techlab/duo-launch/compare/v1.0.6...v1.0.7)\n\n## ✨ 新增\n\n- **media**：汽水音乐车机版只走 GUX 显示，不进框架音源表（[`3303e44`](https://github.com/duoduo-techlab/duo-launch/commit/3303e44)）\n- **dock**：v1.0.30 空调操作面板 + 未导航时的快搜面板（[`34e3afa`](https://github.com/duoduo-techlab/duo-launch/commit/34e3afa)）\n- **map**：中控地图加巡航灯胶囊，灯色走新的 map.light_* token（[`1f33e46`](https://github.com/duoduo-techlab/duo-launch/commit/1f33e46)）\n- **hud**：巡航灯接入风挡 HUD —— 高德 NAVITOOL_CRUISE_TRAFFIC_LIGHTS（[`61ac50e`](https://github.com/duoduo-techlab/duo-launch/commit/61ac50e)）\n\n## 🐞 修复\n\n- **release**：发布仓库里已存在的 Release 只覆盖资源，不再重写说明（[`0354b1a`](https://github.com/duoduo-techlab/duo-launch/commit/0354b1a)）\n\n## 📄 文档\n\n- **device**：拆解「哈弗车机桌面-岛」——TBox / 12V SOC / 嵌卡地图 / 扫码壁纸（[`384e9b5`](https://github.com/duoduo-techlab/duo-launch/commit/384e9b5)）\n- **device**：取证原厂 GwmMap 没有巡航灯广播；中控胶囊秒数改定宽右对齐（[`9e074d9`](https://github.com/duoduo-techlab/duo-launch/commit/9e074d9)）\n- 红绿灯字段/枚举改用仓库资源里的权威定义（新增 device/traffic-light-data-reference.md）（[`347c45c`](https://github.com/duoduo-techlab/duo-launch/commit/347c45c)）\n- 巡航灯方案 §11、里程碑 AT、新增红绿灯 / HUD 材料拆解（[`2e248f0`](https://github.com/duoduo-techlab/duo-launch/commit/2e248f0)）\n\n## 🧹 其他\n\n- **release**：版本号 1.0.7 / versionCode 50（[`348ccff`](https://github.com/duoduo-techlab/duo-launch/commit/348ccff)）\n- **resources**：入库汽水音乐车机版 1.0.9（媒体源调研素材）（[`3e4d72e`](https://github.com/duoduo-techlab/duo-launch/commit/3e4d72e)）\n- **resources**：入库 2026-11 调研素材（红绿灯领航 3.0 / 华阳 HUD / 两套桌面改版 / 酷狗黑标）（[`982c009`](https://github.com/duoduo-techlab/duo-launch/commit/982c009)）\n- **release**：下线七牛链路，更新源只走发布仓库 GitHub Pages（[`86b82b4`](https://github.com/duoduo-techlab/duo-launch/commit/86b82b4)）"
+    },
     {
       "versionName": "1.0.6",
       "versionCode": 49,
