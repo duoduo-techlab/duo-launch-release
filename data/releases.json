@@ -1,9 +1,20 @@
 {
   "schemaVersion": 1,
   "repo": "duoduo-techlab/duo-launch-release",
-  "updatedAt": "2026-11-10T15:30:36Z",
-  "latest": "1.0.7",
+  "updatedAt": "2026-11-11T04:37:06Z",
+  "latest": "1.0.8",
   "releases": [
+    {
+      "versionName": "1.0.8",
+      "versionCode": 51,
+      "tag": "v1.0.8",
+      "publishedAt": "2026-11-11T04:37:06Z",
+      "size": 593329,
+      "sha256": "83f700e08b0eca4befb5bb8365d8611d63dc486d34925c2c6000cfbf9b16fd5b",
+      "url": "https://github.com/duoduo-techlab/duo-launch-release/releases/download/v1.0.8/duo-launcher.apk",
+      "page": "https://github.com/duoduo-techlab/duo-launch-release/releases/tag/v1.0.8",
+      "notes": "**完整变更**：[v1.0.7...v1.0.8](https://github.com/duoduo-techlab/duo-launch/compare/v1.0.7...v1.0.8)\n\n## ✨ 新增\n\n- **probe**：上车探测清单（47 条 / 4 分组 + 自动采集 + 一键导出）（[`01a5d7d`](https://github.com/duoduo-techlab/duo-launch/commit/01a5d7d)）\n- **tools**：真车 AMap 探针 + 换地图引擎的决策与上车清单（[`6454dd2`](https://github.com/duoduo-techlab/duo-launch/commit/6454dd2)）\n\n## 📄 文档\n\n- **voice**：桌面语音助手调研报告 + 上车验证清单（自用试用版）（[`4ce7cfa`](https://github.com/duoduo-techlab/duo-launch/commit/4ce7cfa)）\n\n## 🧹 其他\n\n- **release**：版本号 1.0.8 / versionCode 51（[`376f69d`](https://github.com/duoduo-techlab/duo-launch/commit/376f69d)）"
+    },
     {
       "versionName": "1.0.7",
       "versionCode": 50,
